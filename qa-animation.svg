@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <style>
+    .code{fill:#3b4a6b}
+    .scan{animation:scan 4s ease-in-out infinite}
+    .bug{animation:bug 4s infinite}
+    .x{animation:x 4s infinite}
+    .c1{animation:tick 4s infinite;animation-delay:.6s}
+    .c2{animation:tick 4s infinite;animation-delay:1.2s}
+    .c3{animation:tick 4s infinite;animation-delay:1.8s}
+    .pass{animation:pass 4s infinite}
+    .c1,.c2,.c3{stroke-dasharray:20;stroke-dashoffset:20}
+    @keyframes scan{0%,100%{transform:translate(0,0)}50%{transform:translate(110px,40px)}}
+    @keyframes bug{0%,45%{opacity:1}55%,100%{opacity:.25}}
+    @keyframes x{0%,45%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}
+    @keyframes tick{0%{stroke-dashoffset:20}15%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:20}}
+    @keyframes pass{0%,60%{opacity:0}70%,90%{opacity:1}100%{opacity:0}}
+  </style>
+
+  <rect x="10" y="20" width="190" height="130" rx="10" fill="#1e2a44"/>
+  <rect x="10" y="20" width="190" height="20" rx="10" fill="#2c3e60"/>
+  <circle cx="25" cy="30" r="4" fill="#ff5f56"/><circle cx="38" cy="30" r="4" fill="#ffbd2e"/><circle cx="51" cy="30" r="4" fill="#27c93f"/>
+  <rect class="code" x="25" y="52" width="90" height="6" rx="3"/>
+  <rect class="code" x="35" y="66" width="120" height="6" rx="3"/>
+  <rect class="code" x="35" y="80" width="70" height="6" rx="3"/>
+  <rect class="code" x="25" y="94" width="140" height="6" rx="3"/>
+  <rect class="code" x="35" y="108" width="100" height="6" rx="3"/>
+  <rect class="code" x="25" y="122" width="60" height="6" rx="3"/>
+  <rect x="85" y="150" width="40" height="14" fill="#2c3e60"/>
+  <rect x="60" y="164" width="90" height="6" rx="3" fill="#2c3e60"/>
+
+  <g class="bug" transform="translate(140 100)">
+    <ellipse cx="0" cy="0" rx="9" ry="12" fill="#e5484d"/>
+    <circle cx="0" cy="-13" r="5" fill="#e5484d"/>
+    <path d="M-9-4h-7M-9 4h-7M9-4h7M9 4h7M-3-17l-4-5M3-17l4-5" stroke="#e5484d" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <path class="x" d="M127 87l26 26M153 87l-26 26" stroke="#ff8a8a" stroke-width="4" stroke-linecap="round"/>
+
+  <g class="scan">
+    <circle cx="45" cy="70" r="20" fill="#36bcf7" fill-opacity=".15" stroke="#36bcf7" stroke-width="5"/>
+    <path d="M60 85l18 18" stroke="#36bcf7" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <rect x="215" y="30" width="95" height="120" rx="10" fill="#f4f7fb" stroke="#d0d9e6"/>
+  <rect x="245" y="22" width="35" height="14" rx="4" fill="#36bcf7"/>
+  <g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="227" y="55" width="14" height="14" rx="3" stroke="#9fb0c8"/>
+    <path class="c1" d="M230 62l3 3 6-7" stroke="#27c93f"/>
+    <rect x="227" y="85" width="14" height="14" rx="3" stroke="#9fb0c8"/>
+    <path class="c2" d="M230 92l3 3 6-7" stroke="#27c93f"/>
+    <rect x="227" y="115" width="14" height="14" rx="3" stroke="#9fb0c8"/>
+    <path class="c3" d="M230 122l3 3 6-7" stroke="#27c93f"/>
+  </g>
+  <rect x="250" y="59" width="48" height="6" rx="3" fill="#c7d2e3"/>
+  <rect x="250" y="89" width="40" height="6" rx="3" fill="#c7d2e3"/>
+  <rect x="250" y="119" width="45" height="6" rx="3" fill="#c7d2e3"/>
+
+  <g class="pass">
+    <rect x="175" y="178" width="140" height="30" rx="15" fill="#27c93f"/>
+    <text x="245" y="198" text-anchor="middle" font-family="Fira Code, monospace" font-size="12" font-weight="700" fill="#fff">✓ All tests passed</text>
+  </g>
+</svg>
